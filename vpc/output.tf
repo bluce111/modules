@@ -6,5 +6,5 @@ output "vpc-id" {
   value = "${aws_vpc.vpc-example1.id}"
 }
 output "cidrs" {
-  value = "${var.cidrs.*.id}"
+  value = "$[{var.cidrs.*.id}]"
 }
